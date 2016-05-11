@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @fit.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @fit.description %>
+</p>
+
+<%= link_to 'Edit', edit_fit_path(@fit) %> |
+<%= link_to 'Back', fits_path %>
