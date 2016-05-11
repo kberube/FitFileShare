@@ -17,8 +17,10 @@
         <td><%= fit.title %></td>
         <td><%= fit.description %></td>
         <td><%= link_to 'Show', fit %></td>
+<% if fit.user == current_user %>
         <td><%= link_to 'Edit', edit_fit_path(fit) %></td>
         <td><%= link_to 'Destroy', fit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

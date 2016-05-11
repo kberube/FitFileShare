@@ -1,5 +1,6 @@
 class FitsController < ApplicationController
   before_action :set_fit, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index, :show]
 
   # GET /fits
   # GET /fits.json
@@ -14,7 +15,7 @@ class FitsController < ApplicationController
 
   # GET /fits/new
   def new
-    @fit = Fit.new
+    @fit = current_user.fits.build
   end
 
   # GET /fits/1/edit
@@ -24,7 +25,7 @@ class FitsController < ApplicationController
   # POST /fits
   # POST /fits.json
   def create
-    @fit = Fit.new(fit_params)
+    @fit = current_user.fits.build(fit_params)
 
     respond_to do |format|
       if @fit.save

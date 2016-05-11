@@ -9,6 +9,7 @@
   <strong>Description:</strong>
   <%= @fit.description %>
 </p>
-
+<% if @fit.user == current_user %>
 <%= link_to 'Edit', edit_fit_path(@fit) %> |
+<% end %>
 <%= link_to 'Back', fits_path %>
