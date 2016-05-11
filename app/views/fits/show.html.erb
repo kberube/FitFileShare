@@ -1,15 +1,14 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <h1><a href="#"><%= @fit.title %></a><br> <small>Submitted by <%= @fit.user.email %></small></h1>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @fit.title %>
-</p>
+<div class="btn-group">
+	<%= link_to 'Visit URL', class: "btn btn-primary" %>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @fit.description %>
-</p>
-<% if @fit.user == current_user %>
-<%= link_to 'Edit', edit_fit_path(@fit) %> |
+<% if @fit.user == current_user -%>
+	<div class="btn-group">
+		<%= link_to 'Edit', edit_fit_path(@fit), class: "btn btn-default" %>
+		<%= link_to 'Destroy', @fit, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+	</div>
 <% end %>
-<%= link_to 'Back', fits_path %>
