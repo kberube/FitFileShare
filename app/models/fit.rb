@@ -1,5 +1,6 @@
 class Fit < ActiveRecord::Base
-	acts_as_votable
 	belongs_to :user
 	has_many :comments
+	mount_uploader :file, FileUploader
+	acts_as_votable
 end

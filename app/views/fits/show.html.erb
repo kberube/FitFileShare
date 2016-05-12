@@ -6,7 +6,11 @@
 
 	
 	<%= link_to 'Go Back ', root_path , class: "btn btn-default" %>
-	<%= link_to 'Download File', fit_path, class: "btn btn-primary" %>
+  <% if @fit.file? %>
+	<%= link_to 'Download File', @fit.file.url.to_s, class: "btn btn-primary" %>
+  <% else %>
+  <%= link_to 'No File Uploaded', root_path , class: "btn btn-default" %>
+  <% end %>
 
 </div>
 

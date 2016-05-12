@@ -80,6 +80,6 @@ class FitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fit_params
-      params.require(:fit).permit(:title, :description)
+      params.require(:fit).permit(:file, :title, :description)
     end
 end
