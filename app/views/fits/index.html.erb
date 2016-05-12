@@ -2,7 +2,7 @@
   <div class="link row clearfix">
     <h2>
       <%= link_to fit.title, fit %><br>
-      <small class="author">Submitted <%= time_ago_in_words(fit.created_at) %> by <%= fit.user.email %></small>
+      <small class="author">Submitted <%= time_ago_in_words(fit.created_at) %> by <%= fit.user.username %></small>
     </h2>
 
     <div class="btn-group">
