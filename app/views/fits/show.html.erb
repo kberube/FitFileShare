@@ -31,3 +31,19 @@
     <%= @fit.get_downvotes.size %>
   <% end %>
 </div>
+
+<h3 class="comments_title">
+   <%= pluralize(@fit.comments.count, 'Comment') %>
+</h3>
+
+<div id="comments">
+  <%= render :partial => @fit.comments %>
+</div>
+<%= simple_form_for [@fit, Comment.new]  do |f| %>
+  <div class="field">
+    <%= f.text_area :body, class: "form-control" %>
+  </div>
+  <br>
+  <%= f.submit "Add Comment", class: "btn btn-primary" %>
+<% end %>
+

@@ -11,6 +11,7 @@ class FitsController < ApplicationController
   # GET /fits/1
   # GET /fits/1.json
   def show
+    
   end
 
   # GET /fits/new
@@ -57,7 +58,7 @@ class FitsController < ApplicationController
   def destroy
     @fit.destroy
     respond_to do |format|
-      format.html { redirect_to fits_url, notice: 'Fit was successfully destroyed.' }
+      format.html { redirect_to fits_url, notice: 'Fit was successfully deleted.' }
       format.json { head :no_content }
     end
   end

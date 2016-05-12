@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  resources :comments
+  
   devise_for :users
   resources :fits do
     member do
       put "like",    to: "fits#upvote"
       put "dislike", to: "fits#downvote"
     end
+    resources :comments
   end
 
   root to: "fits#index"
