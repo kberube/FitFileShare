@@ -61,7 +61,16 @@ class FitsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  def upvote
+    @fit = Fit.find(params[:id])
+    @fit.upvote_by current_user
+    redirect_to :back
+  end
+  def downvote
+    @fit = Fit.find(params[:id])
+    @fit.downvote_by current_user
+    redirect_to :back
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_fit
