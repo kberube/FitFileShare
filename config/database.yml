@@ -9,7 +9,7 @@
 development:
   adapter: mysql2
   database: fitfileshare_development
-  username: root
+  username: keith
   password: d3r3kwr1g4t
   host: 162.243.101.84
   socket: /usr/bin/mysql.sock
@@ -21,7 +21,7 @@ development:
 test:
   adapter: mysql2
   database: fitfileshare_test
-  username: root
+  username: keith
   password: d3r3kwr1g4t
   host: 162.243.101.84
   socket: /tmp/mysql.sock
@@ -29,7 +29,7 @@ test:
 production:
   adapter: mysql2
   database: fitfileshare_production
-  username: root
+  username: keith
   password: d3r3kwr1g4t
   host: 162.243.101.84
   socket: /tmp/mysql.sock
