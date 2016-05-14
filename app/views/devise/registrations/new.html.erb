@@ -4,7 +4,7 @@
   <%= devise_error_messages! %>
   
     <div class="form-group">
-      <%= f.label :username %>
+      <%= f.label :username %> <i>- (Usernames cannot be changed -- choose wisely.)</i>
       <%= f.text_field :username, class: "form-control", :autofocus => true, :maxlength => 15 %>
     </div>
 

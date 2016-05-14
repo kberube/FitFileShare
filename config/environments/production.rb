@@ -1,4 +1,6 @@
 Rails.application.configure do
+  config.secret_key_base =
+  '46fa23cd131509c9251987f5fdef24c4b46d383198a3c7b668f331ffcfaa91d9a84e522b702aab7e12671ca5f56f113b73f2af4aad8040a7a27ffd78627eed34'
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -76,4 +78,5 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
 end

@@ -11,7 +11,7 @@ development:
   database: fitfileshare_development
   username: root
   password: d3r3kwr1g4t
-  host: localhost
+  host: 162.243.101.84
   socket: /tmp/mysql.sock
 
 
@@ -23,7 +23,7 @@ test:
   database: fitfileshare_test
   username: root
   password: d3r3kwr1g4t
-  host: localhost
+  host: 162.243.101.84
   socket: /tmp/mysql.sock
 
 production:
@@ -31,5 +31,5 @@ production:
   database: fitfileshare_production
   username: root
   password: d3r3kwr1g4t
-  host: localhost
+  host: 162.243.101.84
   socket: /tmp/mysql.sock
