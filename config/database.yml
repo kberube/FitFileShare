@@ -12,7 +12,7 @@ development:
   username: root
   password: d3r3kwr1g4t
   host: 162.243.101.84
-  socket: /tmp/mysql.sock
+  socket: /usr/bin/mysql.sock
 
 
 # Warning: The database defined as "test" will be erased and
